@@ -4,10 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.event.EventActivity">
+    tools:context=".ui.event.EventActivity"
+    android:orientation="vertical">
 
+    <include layout="@layout/toolbar"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_event"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <FrameLayout
+        android:id="@+id/fragment_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 </LinearLayout>

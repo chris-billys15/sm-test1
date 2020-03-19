@@ -1,18 +1,20 @@
 package suitmedia.test.intern.ui;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import suitmedia.test.intern.R;
+import suitmedia.test.intern.ui.base.BaseActivity;
 import suitmedia.test.intern.ui.event.EventActivity;
 import suitmedia.test.intern.ui.guest.GuestActivity;
 
@@ -24,6 +26,7 @@ public class ChooseActivity extends BaseActivity {
     Button btnEvent;
     @BindView(R.id.btn_guest)
     Button btnGuest;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +65,7 @@ public class ChooseActivity extends BaseActivity {
         if(resultCode == 1){
             btnEvent.setText(data.getStringExtra("event_name"));
         }
-        else{
+        else if(resultCode == 2){
             btnGuest.setText(data.getStringExtra("guest_name"));
             String strDate = data.getStringExtra("birth_date");
             String[] str = strDate.split("-");

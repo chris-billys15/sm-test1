@@ -4,10 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.guest.GuestActivity">
+    tools:context=".ui.guest.GuestActivity"
+    android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_guest"
+    <include layout="@layout/toolbar_guest"
+        android:id="@+id/toolbar_guest"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_container">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_guest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 </LinearLayout>

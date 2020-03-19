@@ -5,32 +5,45 @@
     android:layout_margin="16dp">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="150dp"
+        android:elevation="4dp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/iv_event"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:src="@drawable/ic_launcher_background"
-                android:layout_gravity="left"/>
+                android:layout_alignParentRight="true"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_toRightOf="@id/iv_event"
+                android:layout_alignParentLeft="true"
                 android:layout_margin="16dp">
                 <TextView
                     android:id="@+id/tv_event_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="event name"/>
+                    android:text="Let's Sucess Make The Noise"
+                    android:maxWidth="250dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
                 <TextView
                     android:id="@+id/tv_event_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="date"/>
+                    android:text="Nov 04 2019"
+                    android:textSize="14dp"
+                    android:textColor="@color/textColor"/>
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="250dp"
+                    android:text="@string/desc_text"
+                    android:textSize="14dp"/>
             </LinearLayout>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

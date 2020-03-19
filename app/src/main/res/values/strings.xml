@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">intern</string>
+    <string name="message_from_cody">MESSAGE FROM CODY</string>
+    <string name="desc_text">Lorem ipsum dolor sit amet, suas fastidii recteque at vim, at ubique verterem convenire vis, duo ei persius bonorum oporteat...</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
